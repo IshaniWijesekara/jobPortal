@@ -1,0 +1,71 @@
+
+
+<div class="wrapper fadeInDown">
+  <br>
+  <br>
+  <br>
+  <br>
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form #frmRegistation="ngForm" (ngSubmit)="RegisterJobPoster()">
+
+      <input [(ngModel)]="jobposter.username" type="text" id="username"  name="username" placeholder="User Name" required #username="ngModel" pattern="^[A-Za-z0-9]+(?:[ _-][A-Za-z0-9]+)*$"
+             [class.is-invalid]="jobposter.invalid && jobposter.touched" class="form-control ">
+      <div>
+        <small class="text-danger" [class.d-none]="user.valid || user.untouched">please enter valid username</small>
+      </div>
+
+      <input [(ngModel)]="jobposter.email" type="text" id="email"  name="email" placeholder="Email"  required #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+             [class.is-invalid]="jobposter.invalid && jobposter.touched" class="form-control ">
+      <div>
+        <small class="text-danger" [class.d-none]="email.valid || email.untouched">please enter valid email</small>
+      </div>
+
+      <input [(ngModel)]="jobposter.companyname" type="text" id="companyname"  name="companyname" placeholder="Company Name">
+
+      <input [(ngModel)]="jobposter.password" #password type="text" id="password"  name="password" placeholder="password" required #passcode="ngModel"
+             pattern="^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$"
+             [class.is-invalid]="jobposter.invalid && jobposter.touched" class="form-control">
+      <div>
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched">password must contain at least 8
+          characters, including UPPER/lowercase and number
+        </small>
+      </div>
+
+      <input #repassword type="text" id="repassword"  name="repassword" placeholder="Re-password" >
+      <div>
+        <small class="text-danger" [class.d-none]="repassword.valid || password.untouched || password==repassword ">enter the same
+          password as above
+        </small>
+      </div>
+
+      <label >{{Cheakpassword}}</label>
+      <div class="row">
+
+        <div class="col-md-3 offset-md-2">
+
+          <input type="submit"  class="fadeIn fourth" value="Register" >
+        </div>
+      </div>
+    </form>
+
+
+
+
+
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+
+  </div>
+</div>
+
+

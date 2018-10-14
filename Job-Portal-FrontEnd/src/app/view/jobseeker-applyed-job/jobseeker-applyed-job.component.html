@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<section id="blog-section" >
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6" *ngFor="let jobs of applyJobList">
+            <aside>
+              <img [src]="jobs.jobsDTO.iamgePath" class="img-responsive"  height="200" width="333">
+              <div class="content-title">
+                <div class="text-center">
+                  <h3><a >{{jobs.jobsDTO.jobtitle}}</a></h3>
+                  <h3><a >{{jobs.jobsDTO.category}}</a></h3>
+                </div>
+              </div>
+              <div class="content-footer">
+                <span style="font-size: 16px;color: #fff;">Company Name : {{jobs.jobsDTO.jobPosterDTO.companyname}}</span>
+                <span class="pull-right">
+				</span>
+
+              </div>
+            </aside>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+</html>

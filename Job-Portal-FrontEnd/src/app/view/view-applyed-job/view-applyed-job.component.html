@@ -1,0 +1,26 @@
+
+<div class="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" data-aos="fade-right" *ngFor="let applyJob of applyedJobList">
+        <div class="col-lg-6 col-xs-12" >
+          <img src="{{applyJob.jobsDTO.iamgePath}}" alt="" width="100%">
+        </div>
+
+        <div class="col-lg-6 col-xs-12">
+          <div class="blog-column">
+            <span>{{applyJob.applyJobDetails.jobs.jobtitle}}</span>
+            <ul class="blog-detail list-inline">
+              <li><i class="fa fa-user"></i>{{applyJob.applyJobDTO.jobSeeker.firstName}}</li>
+              <li><i class="fa fa-clock-o"></i>{{applyJob.applyJobDetails.applyData}}</li>
+            </ul>
+            <p>Download CV and Get Job Seeker details</p>
+            <a (click)="searcSelectJob(applyJob.applyJobDetails.applyJob.aid)">Click here</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <br>
+  </div>
+</div>

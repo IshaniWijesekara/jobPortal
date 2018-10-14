@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="card">
+    <div class="container-fliud">
+      <div class="wrapper row">
+        <div class="preview col-md-6">
+
+          <div class="preview-pic tab-content">
+            <div class="tab-pane active" id="pic-1"><img [src]="applyJob.applyJobDTO.jobSeeker.imagePath"/></div>
+          </div>
+
+        </div>
+        <div class="details col-md-6">
+          <div class="panel panel-default text-center">
+            <h3><div class="panel-title"><span class="glyphicon glyphicon-list-alt"></span>   Name</div></h3>
+            <hr>
+            <h4>{{applyJob.applyJobDTO.jobSeeker.firstName}}</h4>
+          </div>
+          <div class="panel panel-default text-center">
+            <div class="rating">
+              <h3><div class="panel-title"><span class="glyphicon glyphicon-info-sign"></span>  Email Address</div></h3>
+              <hr>
+              <h4>{{applyJob.applyJobDTO.jobSeeker.emailAddress}}</h4>
+            </div>
+          </div>
+          <div class="panel panel-default text-center">
+            <h3><div class="panel-title"><span class="glyphicon glyphicon-comment"></span> Interest In</div></h3>
+            <hr>
+            <h4>{{applyJob.applyJobDTO.jobSeeker.interstIn}} </h4>
+          </div>
+          <div class="panel panel-default text-center">
+            <h3><div class="panel-title"><span class="glyphicon glyphicon-credit-card"></span>  stram</div></h3>
+            <hr>
+            <h2>{{applyJob.applyJobDTO.jobSeeker.stream}}</h2>            </div>
+
+          <div class="text-center">
+            <a [href]="applyJob.applyJobDetails.applyJob.jobSeeker.cvPath" type="button" class="add-to-cart btn btn-default" >Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

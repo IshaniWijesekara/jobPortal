@@ -1,0 +1,31 @@
+<form (ngSubmit)="saveProfileData()">
+  <div class="container">
+    <div class="form-group files color">
+      <label>Upload Your Image</label>
+      <input type="file" class="form-control" multiple="" (change)="setImage($event)">
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <input [(ngModel)]="adminProfile.firstName" name="firstName" placeholder="First Name" type="text" required>
+        <input [(ngModel)]="adminProfile.address" name="address" placeholder="Address" type="text" required>
+        <input [(ngModel)]="adminProfile.city" name="city" placeholder="City" type="text" required>
+        Birthday (month and year): <input [(ngModel)]="adminProfile.birthday" name="birthDay" placeholder="Birth Day" type="month" class="calenderSet" required>
+
+
+
+      </div>
+      <div class="col">
+        <input [(ngModel)]="adminProfile.lastName" name="lastName" placeholder="Last Name" type="text" required>
+        <input [(ngModel)]="adminProfile.emailAddress" name="emailAddress" placeholder="Email Address" type="text" required>
+        <input [(ngModel)]="adminProfile.province" name="province" placeholder="Province" type="text" required>
+        <br>
+
+        <input [(ngModel)]="adminProfile.telNumber" name="telNumber" placeholder="Phone Number" type="text" required>
+      </div>
+
+    </div>
+
+  </div>
+  <button type="submit" class="button"><span>Save Details</span></button>
+</form>

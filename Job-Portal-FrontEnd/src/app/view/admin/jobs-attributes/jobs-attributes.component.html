@@ -1,0 +1,56 @@
+<div >
+  <div class="row">
+    <div class="col">
+
+      <form class="form-signin" (ngSubmit)="addCategory()" role="form">
+        <h3 class="form-signin-heading">Add new Catagory</h3>
+        <a href="#" id="flipToRecover" class="flipLink">
+          <div id="triangle-topright"></div>
+        </a>
+        <input [(ngModel)]="category.catagoryName" type="text" class="form-control" name="catagoryName" placeholder="Catagory Name" required autofocus>
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+      </form>
+    </div>
+
+    <div class="col">
+      <form class="form-signin" (ngSubmit)="addIndustry()" role="form">
+        <h3 class="form-signin-heading">Add New Industry</h3>
+        <a href="#" id="flipToRecovers" class="flipLink">
+          <div id="triangle-toprights"></div>
+        </a>
+        <input [(ngModel)]="industry.industryName" type="text" class="form-control" name="industryName" placeholder="Industry Name" required autofocus>
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+      </form>
+    </div>
+
+    <div class="col">
+
+      <form class="form-signin" (ngSubmit)="addBussinessFuntion()" role="form">
+        <h3 class="form-signin-heading">Add Bussiness Funtions</h3>
+        <a href="#"  class="flipLink">
+          <div ></div>
+        </a>
+        <input [(ngModel)]="bussinessFuntion.businessFuntionName" type="text" class="form-control" name="businessFuntionName" placeholder="Bussiness Funtions" required autofocus>
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+      </form>
+
+      <div class="col">
+
+      </div>
+
+
+    </div>
+    <form class="form-signin" (ngSubmit)="addEducationalSpecialization()" role="form">
+      <h3 class="form-signin-heading">Add Educational Specialition</h3>
+      <a href="#"  class="flipLink">
+        <div ></div>
+      </a>
+      <input [(ngModel)]="educationalSpecialization.educationalSpecializationName" type="text" class="form-control" name="educationalSpecializationName" placeholder="Educational Specialition" required autofocus>
+      <br>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<br>
+<div class="col-md-12 col-12">
+  <table id="tblJobSeeker" class="table table-bordered table-hover">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>E-mail</th>
+      <th>Address</th>
+      <th>Contact Number</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let seeker of jobSeeker">
+      <td>{{seeker.firstName}}</td>
+      <td>{{seeker.emailAddress}}</td>
+      <td>{{seeker.address}}</td>
+      <td>{{seeker.phoneNumber}}</td>
+
+    </tr>
+    </tbody>
+  </table>
+
+</div>
